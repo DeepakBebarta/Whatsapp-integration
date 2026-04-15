@@ -1,0 +1,27 @@
+go to meta devlopers website and signing and then create an app 
+after creating an app coonect the whatsapp and then you will get your access key then type your number in that to recive the messages from a bussiness account
+After your token i s generated copy the token and number id 
+After copuing then paste on the env file 
+
+pip install fastapi uvicorn[standard] requests python-dotenv celery redis pydantic
+uvicorn src.whatsapp.webhook:app --reload --port 8000
+
+click on the link in the terminal 
+then go to n gork website and get your key and run that in ngrok cmd that will come once you click on ngrok
+type that command that was present in the website and then run    
+
+ ngrok http 8000
+
+there will be a link on ngrok cmd then copy and paste the link on your browser then website will be open
+
+then click on whatsaap and now you can text and recive all your text 
+
+
+optional commands at the end  in different terminals ::
+
+celery -A src.tasks.celery_app worker --loglevel=info
+celery -A src.tasks.celery_app beat --loglevel=info
+Invoke-RestMethod -Method Post -Uri "http://localhost:8000/send-test" -ContentType "application/json" -Body '{"to": "918121444200", "message": "Hello from Axension AI!"}'
+
+
+by using this optional commands you can edit the message section  and directly meesage from the terminall according to input recived by the customer 
